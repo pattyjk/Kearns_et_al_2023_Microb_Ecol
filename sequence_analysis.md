@@ -4,8 +4,8 @@ Reads were quality filtered and denoised by the sequencing center.
 
 ## Get sample names
 ```
-./usearch64 -fastx_get_sample_names '/home/pattyjk/Desktop/bats_its_catenated (copy).fna' -output samps.txt -sample_delim _
-
+./usearch64 -fastx_get_sample_names '/home/pattyjk/Desktop/bats_its_catenated.fna' -output samps.txt -sample_delim _
+174 samples found
 ```
 
 ## Dereplicate sequences
@@ -67,7 +67,7 @@ biom summarize-table -i OTU_qiime1-9.biom -o otu_sum.txt
 biom add-metadata -i OTU_qiime1-9.biom -o otu_table_tax.biom --observation-metadata-fp=taxonomy/full_rep_set_tax_assignments.txt --sc-separated=taxonomy --observation-header=OTUID,taxonomy
 
 #make OTU into text file for R
-
+biom convert -i  otu_table_tax.biom -o  otu_table_tax.txt --table-type='OTU table' --to-tsv --header-key=taxonomy
 ```
 
 
