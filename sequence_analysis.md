@@ -2,9 +2,15 @@
 
 Reads were quality filtered and denoised by the sequencing center. 
 
+## Get sample names
+```
+./usearch64 -fastx_get_sample_names '/home/pattyjk/Desktop/bats_its_catenated (copy).fna' -output samps.txt -sample_delim _
+
+```
+
 ## Dereplicate sequences
 ```
-./usearch64 -fastx_uniques bats_its_catenated.fna -fastaout uniques_combined_merged.fa -sizeout
+./usearch64 -fastx_uniques bats_its_catenated.fna -fastaout uniques_combined_merged.fa -sizeout -sample_delim _
 ```
 
 ## Remove Singeltons
@@ -46,11 +52,23 @@ cat closed_reference.fasta denovo_otus.fasta > full_rep_set.fna
 
 assign_taxonomy.py -i full_rep_set.fna -o taxonomy -r '/media/pattyjk/Elements/UNITE/sh_refs_qiime_ver7_97_s_01.12.2017.fasta' -t '/media/pattyjk/Elements/UNITE/sh_taxonomy_qiime_ver7_97_s_01.12.2017.txt' -m rdp
 
+#count unassigned taxonomy
+grep 'Unassigned' taxonomy/full_rep_set_tax_assignments.txt -c
+
+0
+
+#convert text OTU table to biom file
+biom convert -i OTU_table.txt -o OTU_qiime1-9.biom --to-hdf5 --table-type='OTU table'
+
+#summarize table
+biom summarize-table -i OTU_qiime1-9.biom -o otu_sum.txt
+
 #add taxonomy to OTU table
-biom add-metadata -i OTU_jsn.biom -o otu_table_tax.biom --observation-metadata-fp=taxonomy/full_rep_set_tax_assignments.txt --sc-separated=taxonomy --observation-header=OTUID,taxonomy
+biom add-metadata -i OTU_qiime1-9.biom -o otu_table_tax.biom --observation-metadata-fp=taxonomy/full_rep_set_tax_assignments.txt --sc-separated=taxonomy --observation-header=OTUID,taxonomy
+
+#make OTU into text file for R
+
 ```
 
-
-```
 
 
