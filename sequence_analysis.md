@@ -1,5 +1,7 @@
 # ITS sequence processing in UPARSE and QIIME
 
+Reads were quality filtered and denoised by the sequencing center. 
+
 ## Dereplicate sequences
 ```
 ./usearch64 -fastx_uniques bats_its_catenated.fna -fastaout uniques_combined_merged.fa -sizeout
