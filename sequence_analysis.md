@@ -4,13 +4,28 @@ Reads were quality filtered and denoised by the sequencing center.
 
 ## Get sample names
 ```
-./usearch64 -fastx_get_sample_names '/home/pattyjk/Desktop/bats_its_catenated.fna' -output samps.txt -sample_delim _
-174 samples found
+./usearch64 -fastx_get_sample_names bats_its_catenated.fna -output samps.txt -sample_delim _
+#174 samples found, in QIIME format
+```
+## Fix sample names in Linux shell
+```
+cp bats_its_catenated.fna ./bats_its_catenated2.fna
+sed -i 's/\.//' bats_its_catenated2.fna
+sed -i 's/_/ /' bats_its_catenated2.fna
+
+sed -i 's/\.//' bats_its_catenated2.fna
+
+
+
+sed -i 's/ITS_/its /' bats_its_catenated2.fna
+
+./usearch64 -fastx_get_sample_names bats_its_catenated2.fna -output samps2.txt
+#174 samples found in USEARCH format
 ```
 
 ## Dereplicate sequences
 ```
-./usearch64 -fastx_uniques bats_its_catenated.fna -fastaout uniques_combined_merged.fa -sizeout -sample_delim _
+./usearch64 -fastx_uniques bats_its_catenated2.fna -fastaout uniques_combined_merged.fa -sizeout
 ```
 
 ## Remove Singeltons
@@ -38,24 +53,25 @@ Reads were quality filtered and denoised by the sequencing center.
 ## Combine the rep sets between de novo and reference-based OTU picking
 ```
 cat closed_reference.fasta denovo_otus.fasta > full_rep_set.fna
+grep -c '>' full_rep_set.fna
+#3621 OTUs
 ```
 
 ## Map rep_set back to pre-dereplicated sequences and make OTU tables
 ```
-./usearch64 -usearch_global bats_its_catenated.fna -db full_rep_set.fna  -strand plus -id 0.97 -uc OTU_map.uc -otutabout OTU_table.txt -biomout OTU_jsn.biom
+./usearch64 -usearch_global bats_its_catenated2.fna -db full_rep_set.fna  -strand plus -id 0.97 -uc OTU_map.uc -otutabout OTU_table.txt
 ```
 
 ## Assigng taxonomy with RDP classifier and add to OTU table
 ```
 #QIIME 1.9.1
-# RDP classifier 
+# RDP classifier v. 2.1
 
 assign_taxonomy.py -i full_rep_set.fna -o taxonomy -r '/media/pattyjk/Elements/UNITE/sh_refs_qiime_ver7_97_s_01.12.2017.fasta' -t '/media/pattyjk/Elements/UNITE/sh_taxonomy_qiime_ver7_97_s_01.12.2017.txt' -m rdp
 
-#count unassigned taxonomy
+#count unassigned taxonomy, common in fungal data 
 grep 'Unassigned' taxonomy/full_rep_set_tax_assignments.txt -c
-
-0
+#0 unassigned reads, whoop
 
 #convert text OTU table to biom file
 biom convert -i OTU_table.txt -o OTU_qiime1-9.biom --to-hdf5 --table-type='OTU table'
@@ -69,6 +85,7 @@ biom add-metadata -i OTU_qiime1-9.biom -o otu_table_tax.biom --observation-metad
 #make OTU into text file for R
 biom convert -i  otu_table_tax.biom -o  otu_table_tax.txt --table-type='OTU table' --to-tsv --header-key=taxonomy
 ```
+
 
 
 
