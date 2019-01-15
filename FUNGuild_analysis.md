@@ -1,5 +1,6 @@
-
-#get latest version
+## FunGuild analsis
+```
+#get latest version, clones on 1/15/19
 git clone https://github.com/UMNFuN/FUNGuild.git
 
 #if recieving 'no module names request' error use: "pip install requests"
