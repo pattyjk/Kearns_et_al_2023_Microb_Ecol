@@ -11,7 +11,7 @@ library(vegan)
 meta<-read.delim("~/bat_mycobiome/uparse_mapping_file.txt", header=T)
 
 #read in OTU table
-otu_table<-read.delim("~/bat_mycobiome/", header=T, row.names=1)
+otu_table<-read.delim("~/bat_mycobiome/otu_table_tax.txt", header=T, row.names=1)
 
 #remove taxonomy column
 otu_table<-otu_table[,-165]
@@ -42,9 +42,9 @@ ggplot(bat.mds2, aes(MDS1, MDS2, colour=ecoregion_iv))+
 meta<-read.delim("~/bat_mycobiome/uparse_mapping_file.txt", header=T)
 
 #read in OTU table
-otu_table<-read.delim("~/bat_mycobiome/", header=T, row.names=1)
+otu_table<-read.delim("~/bat_mycobiome/otu_table_tax.txt", header=T, row.names=1)
 
-s16<-T(otu_table)
+s16<-t(otu_table)
 
 #rarefy data
 library(vegan)
