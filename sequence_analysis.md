@@ -82,8 +82,11 @@ biom summarize-table -i OTU_qiime1-9.biom -o otu_sum.txt
 #add taxonomy to OTU table
 biom add-metadata -i OTU_qiime1-9.biom -o otu_table_tax.biom --observation-metadata-fp=taxonomy/full_rep_set_tax_assignments.txt --sc-separated=taxonomy --observation-header=OTUID,taxonomy
 
+#remove samples with no metadata
+filter_samples_from_otu_table.py -i otu_table_tax.biom -o otu_table_tax2.biom --negate_sample_id_fp --sample_id_fp=missing_samples.txt
+
 #make OTU into text file for R
-biom convert -i  otu_table_tax.biom -o  otu_table_tax.txt --table-type='OTU table' --to-tsv --header-key=taxonomy
+biom convert -i  otu_table_tax2.biom -o  otu_table_tax.txt --table-type='OTU table' --to-tsv --header-key=taxonomy
 ```
 
 
