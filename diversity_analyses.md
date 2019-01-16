@@ -10,8 +10,8 @@ library(vegan)
 #read in meta data
 meta<-read.delim("~/bat_mycobiome/uparse_mapping_file.txt", header=T)
 
-#read in mapping file
-meta<-read.delim("~/bat_mycobiome/uparse_mapping_file.txt", header=T)
+#read in OTU table
+otu_table<-read.delim("~/bat_mycobiome/", header=T, row.names=1)
 
 #remove taxonomy column
 otu_table<-otu_table[,-165]
@@ -37,3 +37,37 @@ ggplot(bat.mds2, aes(MDS1, MDS2, colour=ecoregion_iv))+
 ```
 
 ### Alpha Diversity
+```
+#read in meta data
+meta<-read.delim("~/bat_mycobiome/uparse_mapping_file.txt", header=T)
+
+#read in OTU table
+otu_table<-read.delim("~/bat_mycobiome/", header=T, row.names=1)
+
+s16<-T(otu_table)
+
+#rarefy data
+library(vegan)
+s16<-rrarefy(s16, sample=1200)
+
+#Shannon
+s16.shan<-diversity(s16, index='shannon')
+
+#OTUs observed
+s16.otus<-rowSums(s16>0)
+
+#Pielou's Evenness
+s16.even<-(diversity(s16))/s16.otus
+
+#catenate data into a single frame
+s16.div<-as.data.frame(cbind(s16.shan, s16.otus, s16.even))
+
+#add sample IDs
+s16.div$SampleID<-row.names(s16.div)
+
+#fix coloumn names
+names(s16.div)<-c('Shannon', 'OTUs_Obs', 'Pielous_Even', 'SampleID')
+
+#add metadata
+s16.div<-merge(s16.div, meta, by='SampleID')
+```
