@@ -51,9 +51,10 @@ names(com_dist_m)<-c("sample1", 'sample2', 'bc_sim', 'site1', 'site2')
 
 #combine physical distance with community distance
 full_dist<-merge(com_dist_m, dist_m, by=c('site1', 'site2'))
+```
 
-
-#calculate linear regression
+## Calculate linear regression and plot data
+```
 lm(full_dist$bc_sim ~ full_dist$dist)
 #slope = 0.0002894, intercept = 0.5290678
 
