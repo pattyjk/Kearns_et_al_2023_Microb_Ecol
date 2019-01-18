@@ -27,8 +27,9 @@ bat.mds<-metaMDS(otu_table_t, distance = 'bray')
 bat.mds2<-as.data.frame(bat.mds$points)
 bat.mds2$SampleID<-row.names(bat.mds2)
 bat.mds2<-merge(bat.mds2, meta, by=c('SampleID'))
+names(bat.mds2)<-gsub('area', 'Site', names(bat.mds2))
 
-ggplot(bat.mds2, aes(MDS1, MDS2, colour=area))+  
+ggplot(bat.mds2, aes(MDS1, MDS2, colour=Site))+  
   geom_point(aes(size=2))+
   theme_bw()+
   xlab("MDS1")+
