@@ -1,4 +1,4 @@
-## FunGuild analsis
+## FunGuild analysis
 ```
 #get latest version, clones on 1/15/19
 git clone https://github.com/UMNFuN/FUNGuild.git
@@ -58,7 +58,7 @@ ggplot(funguild_sum, aes(Trophic.Mode, percent_reads))+
   geom_bar(stat='identity')+
   coord_flip()+
   theme_bw()+
-  geom_text(aes(label=percent_reads), nudge_y = 2)+
+  geom_text(aes(label=percent_reads), nudge_y = 3)+
   xlab("Percentage of Total Reads")+
   ylab("Trophic Mode")+
   theme(text = element_text(size=14),
