@@ -53,6 +53,7 @@ ggplot(class_sum, aes(species, mean, fill=Class))+
   xlab("")+
   ylab("Mean Relative Abundance")+
   theme_bw()+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
   scale_fill_manual(values=col_vector)+
   facet_wrap(~area, scales = 'free_x')+
   coord_flip()+
