@@ -65,6 +65,7 @@ summary(lm(full_dist$bc_sim ~ full_dist$dist))
 #plot data
 ggplot(full_dist, aes(dist, bc_sim))+
   geom_point()+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
   theme_bw()+
   geom_abline(aes(slope = 0.0002894, intercept = 0.5290678), size=2)+
   ylab("Bray-Curtis Dissimilarity")+
