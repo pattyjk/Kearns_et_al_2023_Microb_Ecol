@@ -83,15 +83,15 @@ div.sum<-ddply(s16.div, c("area", "species"), summarize, mean=mean(Shannon), sd=
 
 
 ggplot(div.sum, aes(species, mean))+
-geom_point(size=4)+
-ylim(0,5)+
-coord_flip()+
-theme_bw()+
-facet_wrap(~area)+
-theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
-geom_errorbar(aes(ymax=mean+se, ymin=mean-se), width=0.3, cex=0.2)+
-theme(text = element_text(size=14),
+  geom_bar(stat='identity')+
+  ylim(0,5)+
+  coord_flip()+
+  theme_bw()+
+  facet_wrap(~area, nrow=1)+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
+  geom_errorbar(aes(ymax=mean+se, ymin=mean-se), width=0.3, cex=0.2)+
+  theme(text = element_text(size=14),
         axis.text = element_text(size=14), legend.text=element_text(size=14))+
-        ylab("Shannon Diversity")+
-        xlab("")
+  ylab("Shannon Diversity")+
+  xlab("")
 ```
