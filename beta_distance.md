@@ -3,7 +3,7 @@
 ```
 library(geosphere)
 library(vegan)
-library(ggplot)
+library(ggplot2)
 library(reshape2)
 
 #read in site GPS coordinates
