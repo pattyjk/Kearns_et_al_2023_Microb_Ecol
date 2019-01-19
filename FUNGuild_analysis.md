@@ -59,8 +59,8 @@ ggplot(funguild_sum, aes(Trophic.Mode, percent_reads))+
   coord_flip()+
   theme_bw()+
   geom_text(aes(label=percent_reads), nudge_y = 3)+
-  xlab("Percentage of Total Reads")+
-  ylab("Trophic Mode")+
+  ylab("Percentage of Total Reads")+
+  xlab("Trophic Mode")+
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
   theme(text = element_text(size=14),
         axis.text = element_text(size=14), legend.text=element_text(size=14))+
