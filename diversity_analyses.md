@@ -34,6 +34,7 @@ ggplot(bat.mds2, aes(MDS1, MDS2, colour=Site))+
   theme_bw()+
   xlab("MDS1")+
   ylab("MDS2")+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
   theme(text = element_text(size=14),
         axis.text = element_text(size=14), legend.text=element_text(size=14))
 ```
@@ -87,6 +88,7 @@ ylim(0,5)+
 coord_flip()+
 theme_bw()+
 facet_wrap(~area)+
+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
 geom_errorbar(aes(ymax=mean+se, ymin=mean-se), width=0.3, cex=0.2)+
 theme(text = element_text(size=14),
         axis.text = element_text(size=14), legend.text=element_text(size=14))+
