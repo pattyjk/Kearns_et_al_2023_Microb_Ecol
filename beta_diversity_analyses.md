@@ -68,6 +68,7 @@ summary(lm(full_dist$bc_sim ~ full_dist$dist))
 #plot data
 distance<-ggplot(full_dist, aes(dist, bc_sim))+
   geom_point()+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
   ggtitle("(B)")+
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
   theme_bw()+
