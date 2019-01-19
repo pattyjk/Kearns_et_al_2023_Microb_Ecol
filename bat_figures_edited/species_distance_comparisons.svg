@@ -16,13 +16,13 @@
    height="384"
    viewBox="0 0 576 384"
    sodipodi:docname="species_distance_comparisons.svg"
-   inkscape:export-filename="/home/pattyjk/Dropbox/GitHub/bat_figures_raw/species_distance_comparisons.png"
+   inkscape:export-filename="/home/pattyjk/Desktop/bat_mycobiome/bat_figures_edited/species_distance_comparisons.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"><metadata
      id="metadata8"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs6"><clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath36"><path
@@ -46,9 +46,9 @@
      inkscape:window-height="703"
      id="namedview4"
      showgrid="false"
-     inkscape:zoom="0.61458333"
-     inkscape:cx="288"
-     inkscape:cy="192"
+     inkscape:zoom="2.4583333"
+     inkscape:cx="257.19922"
+     inkscape:cy="122.82119"
      inkscape:window-x="67"
      inkscape:window-y="27"
      inkscape:window-maximized="0"
@@ -158,37 +158,41 @@
        id="g112" /><g
        id="g114" /><g
        id="g116"><text
-         transform="matrix(1,0,0,-1,20.52,52.76)"
-         style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text120"><tspan
-           x="0 7.7839999 11.676 19.459999"
-           y="0"
-           sodipodi:role="line"
-           id="tspan118">0.75</tspan></text>
+   transform="matrix(1,0,0,-1,20.52,52.76)"
+   style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text120"><tspan
+     x="0 7.7839999 11.676 19.459999"
+     y="0"
+     sodipodi:role="line"
+     id="tspan118">0.75</tspan></text>
+
 <text
-         transform="matrix(1,0,0,-1,20.52,111.89)"
-         style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text124"><tspan
-           x="0 7.7839999 11.676 19.459999"
-           y="0"
-           sodipodi:role="line"
-           id="tspan122">0.80</tspan></text>
+   transform="matrix(1,0,0,-1,20.52,111.89)"
+   style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text124"><tspan
+     x="0 7.7839999 11.676 19.459999"
+     y="0"
+     sodipodi:role="line"
+     id="tspan122">0.80</tspan></text>
+
 <text
-         transform="matrix(1,0,0,-1,20.52,171.03)"
-         style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text128"><tspan
-           x="0 7.7839999 11.676 19.459999"
-           y="0"
-           sodipodi:role="line"
-           id="tspan126">0.85</tspan></text>
+   transform="matrix(1,0,0,-1,20.52,171.03)"
+   style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text128"><tspan
+     x="0 7.7839999 11.676 19.459999"
+     y="0"
+     sodipodi:role="line"
+     id="tspan126">0.85</tspan></text>
+
 <text
-         transform="matrix(1,0,0,-1,20.52,230.16)"
-         style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text132"><tspan
-           x="0 7.7839999 11.676 19.459999"
-           y="0"
-           sodipodi:role="line"
-           id="tspan130">0.90</tspan></text>
+   transform="matrix(1,0,0,-1,20.52,230.16)"
+   style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text132"><tspan
+     x="0 7.7839999 11.676 19.459999"
+     y="0"
+     sodipodi:role="line"
+     id="tspan130">0.90</tspan></text>
+
 </g><g
        id="g134" /><g
        id="g136"><path
@@ -228,21 +232,23 @@
          inkscape:connector-curvature="0" /></g><g
        id="g170" /><g
        id="g172"><text
-         transform="matrix(1,0,0,-1,72.7,22.77)"
-         style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text176"><tspan
-           x="0 9.3380003 17.122 21.014 30.982 38.765999 46.549999 54.334 58.226002 67.564003 75.348 83.132004 90.132004 93.239998 101.024"
-           y="0"
-           sodipodi:role="line"
-           id="tspan174">Between Species</tspan></text>
+   transform="matrix(1,0,0,-1,72.7,22.77)"
+   style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text176"><tspan
+     x="0 9.3380003 17.122 21.014 30.982 38.765999 46.549999 54.334 58.226002 67.564003 75.348 83.132004 90.132004 93.239998 101.024"
+     y="0"
+     sodipodi:role="line"
+     id="tspan174">Between Species</tspan></text>
+
 <text
-         transform="matrix(1,0,0,-1,203.79,22.77)"
-         style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text180"><tspan
-           x="0 13.216 16.323999 20.216 28 31.108 38.891998 42.784 52.122002 59.905998 67.690002 74.690002 77.797997 85.582001"
-           y="0"
-           sodipodi:role="line"
-           id="tspan178">Within Species</tspan></text>
+   transform="matrix(1,0,0,-1,203.79,22.77)"
+   style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text180"><tspan
+     x="0 13.216 16.323999 20.216 28 31.108 38.891998 42.784 52.122002 59.905998 67.690002 74.690002 77.797997 85.582001"
+     y="0"
+     sodipodi:role="line"
+     id="tspan178">Within Species</tspan></text>
+
 </g><g
        id="g182" /><g
        id="g184" /><g
@@ -252,13 +258,14 @@
        id="g192" /><g
        id="g194" /><g
        id="g196"><text
-         transform="matrix(0,1,1,0,15.53,84.01)"
-         style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text200"><tspan
-           x="0 9.3380003 13.86 21.224001 28.224001 36.400002 46.507999 54.292 59.514 63.405998 66.514 73.514 77.405998 87.514 90.622002 97.622002 104.622 107.73 119.392 122.5 125.608 133.392 138.26401 141.37199 145.26401"
-           y="0"
-           sodipodi:role="line"
-           id="tspan198">Bray−Curtis Dissimilarity</tspan></text>
+   transform="matrix(0,1,1,0,15.53,84.01)"
+   style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text200"><tspan
+     x="0 9.3380003 13.86 21.224001 28.224001 36.400002 46.507999 54.292 59.514 63.405998 66.514 73.514 77.405998 87.514 90.622002 97.622002 104.622 107.73 119.392 122.5 125.608 133.392 138.26401 141.37199 145.26401"
+     y="0"
+     sodipodi:role="line"
+     id="tspan198">Bray−Curtis Dissimilarity</tspan></text>
+
 </g><g
        id="g202" /><g
        id="g204" /><g
@@ -276,13 +283,14 @@
        id="g222" /><g
        id="g224" /><g
        id="g226"><text
-         transform="matrix(1,0,0,-1,340.53,176.21)"
-         style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text230"><tspan
-           x="0 7.9419999 14.058 23.221001 29.337 35.452999 39.280998 41.723 47.223 53.339001"
-           y="0"
-           sodipodi:role="line"
-           id="tspan228">Comparison</tspan></text>
+   transform="matrix(1,0,0,-1,340.53,176.21)"
+   style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text230"><tspan
+     x="0 7.9419999 14.058 23.221001 29.337 35.452999 39.280998 41.723 47.223 53.339001"
+     y="0"
+     sodipodi:role="line"
+     id="tspan228">Comparison</tspan></text>
+
 </g><g
        id="g232" /><g
        id="g234" /><g
@@ -313,26 +321,28 @@
        id="g260" /><g
        id="g262" /><g
        id="g264"><text
-         transform="matrix(1,0,0,-1,363.29,157.93)"
-         style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text268"><tspan
-           x="0 6.0029998 11.007 13.509 19.917 24.921 29.924999 34.929001 37.431 43.433998 45.431999 47.933998 52.938"
-           y="0"
-           sodipodi:role="line"
-           id="tspan266">Between Sites</tspan></text>
+   transform="matrix(1,0,0,-1,363.29,157.93)"
+   style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text268"><tspan
+     x="0 6.0029998 11.007 13.509 19.917 24.921 29.924999 34.929001 37.431 43.433998 45.431999 47.933998 52.938"
+     y="0"
+     sodipodi:role="line"
+     id="tspan266">Between Sites</tspan></text>
+
 </g><g
        id="g270" /><g
        id="g272" /><g
        id="g274" /><g
        id="g276" /><g
        id="g278"><text
-         transform="matrix(1,0,0,-1,363.29,140.65)"
-         style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text282"><tspan
-           x="0 8.4960003 10.494 12.996 18 19.997999 25.002001 27.504 32.507999 35.009998 39.509998 41.507999 44.009998"
-           y="0"
-           sodipodi:role="line"
-           id="tspan280">Within a site</tspan></text>
+   transform="matrix(1,0,0,-1,363.29,140.65)"
+   style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+   id="text282"><tspan
+     x="0 8.4960003 10.494 12.996 18 19.997999 25.002001 27.504 32.507999 35.009998 39.509998 41.507999 44.009998"
+     y="0"
+     sodipodi:role="line"
+     id="tspan280">Within a site</tspan></text>
+
 </g><g
        id="g284" /><g
        id="g286" /><g
@@ -346,4 +356,52 @@
        id="g302" /><g
        id="g304" /><g
        id="g306" /><g
-       id="g308" /></g></svg>
+       id="g308" /><text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+       x="107.38983"
+       y="-240.71188"
+       id="text155"
+       transform="scale(1,-1)"><tspan
+         sodipodi:role="line"
+         id="tspan153"
+         x="107.38983"
+         y="-240.71188"
+         style="font-size:15px;stroke-width:0.75">a</tspan></text>
+<text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+       x="230.71115"
+       y="-235.93536"
+       id="text155-3"
+       transform="scale(1,-1)"><tspan
+         sodipodi:role="line"
+         id="tspan153-6"
+         x="230.71115"
+         y="-235.93536"
+         style="font-size:15px;stroke-width:0.75">a</tspan></text>
+<text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+       x="137.19409"
+       y="-130.14305"
+       id="text155-7"
+       transform="scale(1,-1)"><tspan
+         sodipodi:role="line"
+         id="tspan153-5"
+         x="137.19409"
+         y="-130.14305"
+         style="font-size:15px;stroke-width:0.75">b</tspan></text>
+<text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+       x="260.75342"
+       y="-93.227798"
+       id="text155-35"
+       transform="scale(1,-1)"><tspan
+         sodipodi:role="line"
+         id="tspan153-62"
+         x="260.75342"
+         y="-93.227798"
+         style="font-size:15px;stroke-width:0.75">c</tspan></text>
+</g></svg>
