@@ -5,6 +5,9 @@ library(geosphere)
 library(vegan)
 library(ggplot2)
 library(reshape2)
+library(plyr)
+library(gridExtra)
+
 
 #read in site GPS coordinates
 site_gps<-read.delim("bat_mycobiome/site_gps.txt", header=T)
@@ -63,8 +66,9 @@ summary(lm(full_dist$bc_sim ~ full_dist$dist))
 #F=1511 (1, 26567), p<2e-16, both slope/intercept are sig. @ p<2e-16
 
 #plot data
-ggplot(full_dist, aes(dist, bc_sim))+
+distance<-ggplot(full_dist, aes(dist, bc_sim))+
   geom_point()+
+  ggtitle("(B)")+
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
   theme_bw()+
   geom_abline(aes(slope = 0.0002894, intercept = 0.5290678), size=2)+
@@ -73,15 +77,9 @@ ggplot(full_dist, aes(dist, bc_sim))+
   theme(text = element_text(size=14),
         axis.text = element_text(size=14), legend.text=element_text(size=14))
 ```
-  
+
 ### Beta diversity
 ```
-#R v. 3.4.4
-library(ggplot2)
-library(plyr)
-library(reshape2)
-library(vegan)
-
 #read in meta data
 #setwd("/Users/patty/Dropbox/GitHub/")
 meta<-read.delim("bat_mycobiome/uparse_mapping_file.txt", header=T)
@@ -104,14 +102,18 @@ bat.mds2$SampleID<-row.names(bat.mds2)
 bat.mds2<-merge(bat.mds2, meta, by=c('SampleID'))
 names(bat.mds2)<-gsub('area', 'Site', names(bat.mds2))
 
-ggplot(bat.mds2, aes(MDS1, MDS2, colour=Site))+  
+mds<-ggplot(bat.mds2, aes(MDS1, MDS2, colour=Site))+  
   geom_point(aes(size=2))+
   theme_bw()+
   xlab("MDS1")+
+  ggtitle("(A)")+
   ylab("MDS2")+
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
   theme(text = element_text(size=14),
         axis.text = element_text(size=14), legend.text=element_text(size=14))
+
+#plot together
+grid.arrange(mds, distance, ncol=2, widths=c(1,.8))
 ```
 
 
