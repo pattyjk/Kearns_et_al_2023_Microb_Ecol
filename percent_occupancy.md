@@ -59,6 +59,7 @@ ggplot(per_occu, aes(otu_means_log, per_occ))+
   geom_point(data=count55_p, aes(otu_means_log, per_occ, size=.7), colour='black')+
   geom_point(data=count3_p, aes(otu_means_log, per_occ, size=.7), colour='black')+
   theme_bw()+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
   xlab("Log10 Mean OTU Abundance")+
   ylab("Percent Occupancy")+
   theme(text = element_text(size=14),
