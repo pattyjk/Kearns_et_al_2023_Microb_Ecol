@@ -1,4 +1,4 @@
-## Anlysis of beta and alpha diversity
+## Anlysis of alpha diversity
 
 ### Alpha Diversity
 ```
