@@ -12,7 +12,7 @@ library(gridExtra)
 #read in site GPS coordinates
 site_gps<-read.delim("bat_mycobiome/site_gps.txt", header=T)
 
-#calculate distance matrix between all GPS coordinates
+#calculate distance matrix between all GPS coordinates, distances are in km
 pairwise_site_distance<-as.data.frame(distm(site_gps[c('long', 'lat')])*0.0006213712)
 colnames(pairwise_site_distance)<-site_gps$name
 rownames(pairwise_site_distance)<-site_gps$name
@@ -73,7 +73,7 @@ distance<-ggplot(full_dist, aes(dist, bc_sim))+
   theme_bw()+
   geom_abline(aes(slope = 0.0002894, intercept = 0.5290678), size=2)+
   ylab("Bray-Curtis Dissimilarity")+
-  xlab("Distance-m")+
+  xlab("Distance-km")+
   theme(text = element_text(size=14),
         axis.text = element_text(size=14), legend.text=element_text(size=14))
 ```
