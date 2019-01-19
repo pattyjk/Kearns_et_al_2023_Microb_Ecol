@@ -55,7 +55,7 @@ ggplot(class_sum, aes(species, mean, fill=Class))+
   theme_bw()+
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
   scale_fill_manual(values=col_vector)+
-  facet_wrap(~area, scales = 'free_x')+
+  facet_wrap(~area, scales = 'free_x', nrow=1)+
   coord_flip()+
   theme(text = element_text(size=14),
         axis.text = element_text(size=14), legend.text=element_text(size=14))
