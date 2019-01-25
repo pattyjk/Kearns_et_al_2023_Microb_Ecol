@@ -56,3 +56,36 @@ ggplot(div.sum, aes(species, mean))+
   ylab("Shannon Diversity")+
   xlab("")
 ```
+
+## Examine correlation between diversity and meta data and location
+```
+#read in lat/long data
+latlong<-read.delim("bat_mycobiome/site_gps.txt", header=T)
+
+#merge lat/long to diversity data
+s16.div<-merge(s16.div, latlong, by.x='area', by.y='name')
+
+par(mfrow=c(1,2))
+
+cor.test(s16.div$lat, s16.div$OTUs_Obs)
+plot(s16.div$lat, s16.div$OTUs_Obs, xlab = 'Latitude', ylab='OTUs Observed')
+
+cor.test(s16.div$lat, s16.div$Shannon)
+plot(s16.div$lat, s16.div$Shannon, , xlab = 'Latitude', ylab='Shannon Diversity')
+
+ggplot(s16.div, aes(lat, OTUs_Obs))+
+         geom_point()+
+         theme_bw()+
+  ylab("OTUs Observed")+
+  xlab("Latitude")+
+         geom_smooth(method='lm')+
+  facet_wrap(~species, scale='free')
+
+ggplot(s16.div, aes(lat, Shannon))+
+  geom_point()+
+  theme_bw()+
+  ylab("Shannon Diversity")+
+  xlab("Latitude")+
+  geom_smooth(method='lm')+
+  facet_wrap(~species, scale='free')
+ ```
