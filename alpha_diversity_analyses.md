@@ -89,5 +89,5 @@ ggplot(s16.div, aes(lat, Shannon))+
 bat.glmer<- stan_glmer(OTUs_Obs ~ lat + (1|species) + (1|area) + (1|sex) + (1|cave_or_surface) + (1|Feeding.Flight.behavior) + (1|Diet), data=s16.div, family= gaussian)
 bat.glmer.sum<-as.data.frame(summary(bat.glmer))
 View(bat.glmer.sum)
-write.table(bat.glmer.sum, 'bat_glmer_sum.txt', sep='\t', row.names=F, quote=F)
+write.table(bat.glmer.sum, 'bat_glmer_sum.txt', sep='\t', quote=F)
  ```
