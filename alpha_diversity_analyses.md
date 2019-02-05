@@ -4,10 +4,12 @@
 ```
 library(plyr)
 library(vegan)
+library(ggplot2)
 library(reshape2)
+library(rstanarm)
 
 #read in meta data
-meta<-read.delim("bat_mycobiome/uparse_mapping_file.txt", header=T)
+meta<-read.delim("bat_mycobiome/uparse_mapping_file_temp.txt", header=T)
 
 #read in OTU table
 otu_table<-read.delim("bat_mycobiome/otu_table_tax_R.txt", header=T, row.names=1)
@@ -57,7 +59,7 @@ ggplot(div.sum, aes(species, mean))+
   xlab("")
 ```
 
-## Examine correlation between diversity and meta data and location
+### Examine correlation between diversity and meta data and location
 ```
 #read in lat/long data
 latlong<-read.delim("bat_mycobiome/site_gps.txt", header=T)
@@ -65,21 +67,11 @@ latlong<-read.delim("bat_mycobiome/site_gps.txt", header=T)
 #merge lat/long to diversity data
 s16.div<-merge(s16.div, latlong, by.x='area', by.y='name')
 
-par(mfrow=c(1,2))
-
 cor.test(s16.div$lat, s16.div$OTUs_Obs)
-plot(s16.div$lat, s16.div$OTUs_Obs, xlab = 'Latitude', ylab='OTUs Observed')
+#p=0.00024, Rho=0.28
 
 cor.test(s16.div$lat, s16.div$Shannon)
-plot(s16.div$lat, s16.div$Shannon, , xlab = 'Latitude', ylab='Shannon Diversity')
-
-ggplot(s16.div, aes(lat, OTUs_Obs))+
-         geom_point()+
-         theme_bw()+
-  ylab("OTUs Observed")+
-  xlab("Latitude")+
-         geom_smooth(method='lm')+
-  facet_wrap(~species, scale='free')
+#Rho=0.185, p=0.0181
 
 ggplot(s16.div, aes(lat, Shannon))+
   geom_point()+
@@ -88,4 +80,14 @@ ggplot(s16.div, aes(lat, Shannon))+
   xlab("Latitude")+
   geom_smooth(method='lm')+
   facet_wrap(~species, scale='free')
+ ```
+ 
+ 
+ ### Linear mixed effects model to explain drivers of diversity
+ ```
+#run glmer bayesian model
+bat.glmer<- stan_glmer(OTUs_Obs ~ lat + (1|species) + (1|area) + (1|sex) + (1|cave_or_surface) + (1|Feeding.Flight.behavior) + (1|Diet), data=s16.div, family= gaussian)
+bat.glmer.sum<-as.data.frame(summary(bat.glmer))
+View(bat.glmer.sum)
+write.table(bat.glmer.sum, 'bat_glmer_sum.txt', sep='\t', row.names=F, quote=F)
  ```
