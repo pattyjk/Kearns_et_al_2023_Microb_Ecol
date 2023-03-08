@@ -8,6 +8,6 @@ git clone https://github.com/pattyjk/bat_mycobiome.git
 
 And download the dataset in fasta format:
 
-https://drive.google.com/open?id=17LU--yG9R8uUC7Vov2pmOH4m4qxeQUZB
+https://liveumb-my.sharepoint.com/:f:/r/personal/patrick_kearns_umb_edu/Documents/Woodhams%20lab/Fungal%20Bat%20Sequencing_raw?csf=1&web=1&e=2UmgtJ
 
 Please email Patrick Kearns (patrick.kearns [at] umb.edu) with any questions. 
