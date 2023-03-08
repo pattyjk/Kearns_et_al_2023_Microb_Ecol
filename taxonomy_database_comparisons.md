@@ -17,19 +17,19 @@ names(ncbi_m)<-c("Tax", 'SampleID', "Rel_abun_ncbi")
 
 #make plot
 par(mfrow=c(1,3))
-plot(unite_m$Rel_abun_unite, warcup_m$Rel_abun_warcup, xlab='Relative Abundance- Unite', ylab='Relative Abundance- Warcup')
+plot(unite_m$Rel_abun_unite, warcup_m$Rel_abun_warcup, xlab='Relative Abundance- Unite', ylab='Relative Abundance- Warcup', main='(A)')
 abline(0,1, col='red')
-plot(unite_m$Rel_abun_unite, ncbi_m$Rel_abun_ncbi, xlab='Relative Abundance- Unite', ylab='Relative Abundance- NCBI')
+plot(unite_m$Rel_abun_unite, ncbi_m$Rel_abun_ncbi, xlab='Relative Abundance- Unite', ylab='Relative Abundance- NCBI', main='(B)')
 abline(0,1, col='red')
-plot(ncbi_m$Rel_abun_ncbi, warcup_m$Rel_abun_warcup, xlab='Relative Abundance- NCBI', ylab='Relative Abundance- Warcup')
+plot(ncbi_m$Rel_abun_ncbi, warcup_m$Rel_abun_warcup, xlab='Relative Abundance- NCBI', ylab='Relative Abundance- Warcup', main='(C)')
 abline(0,1, col='red')
 
 #spreaman correlation
 cor.test(unite_m$Rel_abun_unite, warcup_m$Rel_abun_warcup, method='spearman')
-#rho =, p=
+#rho = 0.85, p<2e-16
 cor.test(unite_m$Rel_abun_unite, ncbi_m$Rel_abun_ncbi, method='spearman')
-#rho =, p=
+#rho =.85, p<2e-16
 cor.test(ncbi_m$Rel_abun_ncbi, warcup_m$Rel_abun_warcup, method='spearman')
-#rho =, p=
+#rho =.85,p<2e-16
 
 ```
